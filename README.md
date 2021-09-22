@@ -26,3 +26,14 @@ php artisan make:controller ViajeController
 
 ***Endpoint
 https://web-api.jlssystem.com/api/cliente/all
+
+*** COMANDOS LARAVEL INSTALACION
+php artisan migrate
+
+config .env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=api-web
+DB_USERNAME=root
+DB_PASSWORD=
