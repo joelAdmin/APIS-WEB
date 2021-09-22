@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\passportAuthController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ViajeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,15 +21,7 @@ Route::get('cliente/all', [ClienteController::class, 'all']);
 Route::post('cliente/created', [ClienteController::class, 'store']);
 Route::delete('cliente/delete/{id}', [ClienteController::class, 'destroy']);
 Route::put('cliente/update/{id}', [ClienteController::class, 'update']);
+Route::get('viaje/all', [ViajeController::class, 'all']);
 
-//Route::post('login_2', [AuthController::class, 'login_2']);
-/*
-Route::group(['middleware'=>'auth:api'], function(){
-    Route::get('all_2', [ChatController::class, 'all_2']);
-    Route::get('logout', [AuthController::class, 'logout']);
-    Route::get('user/{id}', [AuthController::class, 'show']);
-    Route::get('chatsAuthU/{id}', [ChatController::class, 'allAuthU']);
-    Route::get('chatsAuthM/{id}', [ChatController::class, 'allAuthM']);
-    Route::get('subChatAuthM/{id}', [ChatController::class, 'subAllAuthM']);
-    Route::get('getMessage/{id}', [MessageController::class, 'show']);
-});*/
+Route::post('viaje/created', [ViajeController::class, 'store']);
+
